@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}
+PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <span class="eyebrow">
+            SMART BUDGET ASSISTANT
+        </span>
+
+        <h1>
+            Plan smarter.
+            <br>
+
+            <span>
+                Spend with confidence.
+            </span>
+        </h1>
+
+        <p>
+            Personalized AI-assisted planning
+            for home interiors, parties and
+            jewelry — built around your budget.
+        </p>
+
+        <div class="actions">
+
+            <a
+                class="btn"
+                href="/register"
+            >
+                Get Started
+            </a>
+
+            <a
+                class="btn ghost"
+                href="/login"
+            >
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="spark">
+            ✦
+        </div>
+
+        <h3>
+            One budget. A smarter plan.
+        </h3>
+
+        <p>
+            Gemini can turn your preferences
+            into structured suggestions.
+            A local catalog fallback keeps
+            the demo usable even without an
+            API key.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="grid three">
+
+    <article>
+
+        <h2>
+            🏠 Home
+        </h2>
+
+        <p>
+            Room, style and item planning
+            for decor, lighting and furniture.
+        </p>
+
+        <a href="/planner/home">
+            Open planner →
+        </a>
+
+    </article>
+
+
+    <article>
+
+        <h2>
+            🎉 Party
+        </h2>
+
+        <p>
+            Budget allocation across food,
+            venue and decorations.
+        </p>
+
+        <a href="/planner/party">
+            Open planner →
+        </a>
+
+    </article>
+
+
+    <article>
+
+        <h2>
+            💎 Jewelry
+        </h2>
+
+        <p>
+            Occasion and style-based
+            suggestions with optional
+            outfit image input.
+        </p>
+
+        <a href="/planner/jewelry">
+            Open planner →
+        </a>
+
+    </article>
+
+</section>
+
+{% endblock %}

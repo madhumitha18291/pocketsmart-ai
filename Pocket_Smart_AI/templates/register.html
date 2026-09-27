@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+
+{% block content %}
+
+<div class="auth">
+
+    <h1>
+        Create your account
+    </h1>
+
+    <p>
+        Save plans and revisit
+        recommendation history.
+    </p>
+
+
+    <form id="registerForm" method="post" action="/register">
+
+        <label>
+
+            Name
+
+            <input
+                name="name"
+                required
+                minlength="2"
+            >
+
+        </label>
+
+
+        <label>
+
+            Email
+
+            <input
+                name="email"
+                type="email"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Password
+
+            <input
+                name="password"
+                type="password"
+                required
+                minlength="6"
+            >
+
+        </label>
+
+
+        <button class="btn">
+            Register
+        </button>
+
+
+        <div
+            id="formError"
+            class="error"
+        ></div>
+
+    </form>
+
+
+    <p>
+
+        Already registered?
+
+        <a href="/login">
+            Login
+        </a>
+
+    </p>
+
+</div>
+
+{% endblock %}

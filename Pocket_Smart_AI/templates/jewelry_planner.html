@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jewelry Planner
+{% endblock %}
+
+
+{% block content %}
+
+<div class="planner">
+
+    <div class="pagehead">
+
+        <span class="eyebrow">
+            JEWELRY PLANNER
+        </span>
+
+        <h1>
+            Find a matching look
+        </h1>
+
+        <p>
+            Use occasion, style and
+            optional outfit image context.
+        </p>
+
+    </div>
+
+
+    <form
+        id="jewelryForm"
+        class="form-grid"
+        enctype="multipart/form-data"
+    >
+
+        <label>
+
+            Budget (₹)
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Occasion
+
+            <input
+                name="occasion"
+                placeholder="Wedding / college event"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Style
+
+            <input
+                name="style"
+                value="elegant"
+            >
+
+        </label>
+
+
+        <label>
+
+            Outfit color
+
+            <input
+                name="outfit_color"
+                placeholder="Blue"
+            >
+
+        </label>
+
+
+        <label class="full">
+
+            Outfit image (optional)
+
+            <input
+                name="image"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+            >
+
+        </label>
+
+
+        <button class="btn">
+
+            Generate recommendations
+
+        </button>
+
+    </form>
+
+
+    <div
+        id="result"
+        class="result hidden"
+    ></div>
+
+</div>
+
+{% endblock %}

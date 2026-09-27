@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Planner
+{% endblock %}
+
+
+{% block content %}
+
+<div class="planner">
+
+    <div class="pagehead">
+
+        <span class="eyebrow">
+            HOME INTERIOR
+        </span>
+
+        <h1>
+            Build a home plan
+        </h1>
+
+        <p>
+            Tell PocketSmart AI your
+            room, style and budget.
+        </p>
+
+    </div>
+
+
+    <form
+        id="homeForm"
+        class="form-grid"
+    >
+
+        <label>
+
+            Budget (₹)
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Room
+
+            <input
+                name="room"
+                placeholder="Living room"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Style
+
+            <input
+                name="style"
+                value="modern"
+            >
+
+        </label>
+
+
+        <label>
+
+            Items
+
+            <input
+                name="items"
+                value="lights, decor, furniture"
+            >
+
+        </label>
+
+
+        <button class="btn">
+
+            Generate recommendations
+
+        </button>
+
+    </form>
+
+
+    <div
+        id="result"
+        class="result hidden"
+    ></div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+
+{% block content %}
+
+<section class="pagehead">
+
+    <div>
+
+        <span class="eyebrow">
+            DASHBOARD
+        </span>
+
+        <h1>
+            Hi, {{ user.name }} 👋
+        </h1>
+
+        <p>
+            Choose a planner to create
+            a personalized recommendation.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="grid three">
+
+    <article>
+
+        <h2>
+            🏠 Home
+        </h2>
+
+        <p>
+            Interior and room planning.
+        </p>
+
+        <a
+            class="btn"
+            href="/planner/home"
+        >
+            Plan Home
+        </a>
+
+    </article>
+
+
+    <article>
+
+        <h2>
+            🎉 Party
+        </h2>
+
+        <p>
+            Event planning and budget
+            allocation.
+        </p>
+
+        <a
+            class="btn"
+            href="/planner/party"
+        >
+            Plan Party
+        </a>
+
+    </article>
+
+
+    <article>
+
+        <h2>
+            💎 Jewelry
+        </h2>
+
+        <p>
+            Jewelry matching and
+            occasion planning.
+        </p>
+
+        <a
+            class="btn"
+            href="/planner/jewelry"
+        >
+            Plan Jewelry
+        </a>
+
+    </article>
+
+</section>
+
+
+<section>
+
+    <h2>
+        Recent plans
+    </h2>
+
+
+    {% if history %}
+
+        <div class="history">
+
+            {% for item in history %}
+
+                <div class="history-row">
+
+                    <b>
+                        {{ item.category|title }}
+                    </b>
+
+                    <span>
+                        ₹{{ "%.0f"|format(item.budget) }}
+                    </span>
+
+                    <small>
+                        {{ item.created_at }}
+                    </small>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <div class="empty">
+            No plans yet.
+        </div>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

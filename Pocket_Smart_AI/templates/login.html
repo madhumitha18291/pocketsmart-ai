@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block content %}
+
+<div class="auth">
+
+    <h1>
+        Welcome back
+    </h1>
+
+    <p>
+        {{ message or "Login to continue." }}
+    </p>
+
+
+    <form id="loginform" method="post" action="/api/login">
+
+        <label>
+
+            Email
+
+            <input
+                name="email"
+                type="email"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Password
+
+            <input
+                name="password"
+                type="password"
+                required
+            >
+
+        </label>
+
+
+        <button class="btn">
+            Login
+        </button>
+
+
+        <div
+            id="formError"
+            class="error"
+        ></div>
+
+    </form>
+
+
+    <p>
+
+        New here?
+
+        <a href="/register">
+            Create an account
+        </a>
+
+    </p>
+
+</div>
+
+{% endblock %}
+            
